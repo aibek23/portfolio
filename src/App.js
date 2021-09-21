@@ -1,22 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Header  from './components/header/Header';
 import Home from './pages/home/Home';
 import Portfolio from './pages/portfolio/Portfolio'
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Block from './pages/block/Block'
-import {HashRouter  , Route ,Switch ,Router} from 'react-router-dom';
+import { Route ,Switch , Redirect} from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter >
-      <Router>
-        <Header/>
-        <Switch>
+    <>
+      <Header/>
+      <Switch>
           <Route exact path="/">
-            <Home/>
+                <Home/>
           </Route>
-
           <Route exact path="/portfolio">
             <Portfolio/>
           </Route>
@@ -29,9 +27,9 @@ function App() {
           <Route exact path="/block">
             <Block/>
           </Route>
-          </Switch>
-          </Router>
-      </HashRouter >
+          <Redirect to="/"/>
+      </Switch>
+    </>
   );
 }
 
