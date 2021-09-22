@@ -52,56 +52,68 @@ const Header = () => {
     }, []);
     return (
         <>
-            <div className="header">
-                <Navbar expand="lg" variant="dark" className="navbar-mainbg p-0 pt-2">
-                    <div className="wrapper__nav__btn">
-                        <a href="/" ><img src={logo} style={{ height: "65px", marginLeft: "25px" }} alt="" /></a>
-                        <Navbar.Toggle className="ml-0"
-                            onClick={function () {
-                                setTimeout(function () { animation(); });
-                            }}
-                            type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                        />
-                    </div>
-                    <Navbar.Collapse id="navbarSupportedContent">
-                        {/* <Nav className="me-auto"></Nav> */}
-                        <ul className="navbar-nav " id="">
-                            <div className="hori-selector">
-                                <div className="left"></div>
-                                <div className="right"></div>
-                            </div>
-                            <li className="nav-item active" >
-                                <NavLink className="nav-link" to="/" exact>
-                                    <h5>главная</h5>
-                                </NavLink>
-                            </li>
 
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/about" exact>
-                                    <h5>обо мне</h5>
-                                </NavLink>
-                            </li>
+            <nav className="navbar navbar-expand-lg navbar-mainbg pb-0">
 
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/portfolio" exact>
-                                    <h5>портфолио</h5>
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/contact" exact>
-                                    <h5>контакт</h5>
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/block" exact>
-                                    <h5>блок</h5>
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </Navbar.Collapse>
-                </Navbar >
-                {/* <i className="header__line"></i> */}
-            </div>
+                <a className="navbar-brand navbar-logo" style={{ position: "relative", height: "60px", widows: "60px" }} href="/" ><img src={logo} style={{ height: "60px", marginLeft: "25px", position: "absolute", top: "-65" }} alt="" /></a>
+
+
+                <button
+                    className="navbar-toggler"
+                    onClick={function () {
+                        setTimeout(function () { animation(); });
+                    }}
+                    type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i className="fas fa-bars text-white"></i>
+                </button>
+
+                <div
+                    className="collapse navbar-collapse pb-0" id="navbarSupportedContent">
+                    <ul className="navbar-nav ml-auto">
+                        <div className="hori-selector">
+                            <div className="left"></div>
+                            <div className="right"></div>
+                        </div>
+                        <li className="nav-item active" >
+                            <NavLink className="nav-link" to="/" >
+                                <i
+                                    className="fas fa-tachometer-alt">
+                                </i>главная
+                            </NavLink>
+                        </li>
+
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/about" exact>
+                                <i
+                                    className="far fa-address-book">
+                                </i>обо мне
+                            </NavLink>
+                        </li>
+
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/portfolio" exact>
+                                <i
+                                    className="far fa-clone">
+                                </i>портфолио
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/contact" exact>
+                                <i
+                                    className="far fa-copy">
+                                </i>контакт
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/block" exact>
+                                <i
+                                    className="far fa-chart-bar">
+                                </i>блок
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </>
     );
 };
