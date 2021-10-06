@@ -5,12 +5,14 @@ import Portfolio from './pages/portfolio/Portfolio'
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Block from './pages/block/Block'
+import Navbar from './components/navbar/Navbar';
 import { Route ,Switch , Redirect} from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Header/>
+      {/* <Navbar/> */}
       <Switch>
           <Route exact path="/">
                 <Home/>
@@ -18,13 +20,13 @@ function App() {
           <Route exact path="/portfolio">
             <Portfolio/>
           </Route>
-          <Route exact path="/about">
+          <Route path="/about">
             <About/>
           </Route>
-          <Route exact path="/contact">
+          <Route path="/contact">
             <Contact/>
           </Route>
-          <Route exact path="/block">
+          <Route path="/block">
             <Block/>
           </Route>
           <Redirect to="/"/>

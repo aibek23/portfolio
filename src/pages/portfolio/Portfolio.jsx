@@ -1,10 +1,12 @@
 import React from "react";
+import Todolist from "../../components/todolist/Todolist";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
 
 const Portfolio = () => {
     return (
         <Container>
             <Row lg={3} md={2} cm={1} >
+                <Todolist />
                 <Col  >
                     <Card style={{ margin: '1rem 1rem' }} >
                         <Card.Img variant="top" src="https://images.wallpaperscraft.ru/image/mclaren_p1_krasnyj_sportkar_vid_sboku_109728_3840x2400.jpg" />

@@ -52,7 +52,7 @@ const CarouselBox = () => {
                     <p className={s.carousel__text}>Hello! My name is Aybek and I</p>
                 </div>
                 <img
-                    style={{ maxHeight: "635px" }}
+                    style={{ height: "635px" }}
                     className="d-block w-100"
                     src="https://dev26.5bucks.ru/wp-content/uploads/2020/06/field_image_data_entry.jpg"
                     alt="Third slide"
