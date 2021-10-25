@@ -1,8 +1,10 @@
 import React from "react";
-
+import { Container, col } from 'react-bootstrap';
 const About = () => {
     return (
-        <h1>About pages</h1>
+        <Container>
+            <h1>About pages</h1>
+        </Container>
     );
 }
 export default About;

@@ -7,11 +7,11 @@ import  'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <HashRouter >
+  <HashRouter>
     <React.StrictMode>
       <App />
     </React.StrictMode>
   </HashRouter>,
-  document.getElementById('root')
+   document.getElementById('root')
 );
 

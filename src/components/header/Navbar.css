@@ -8,6 +8,17 @@ body {
   position: relative;
 }
 
+.offcanvas-header {
+  background-color: #212529;
+  border-bottom: solid 2px #fff;
+}
+
+.btn-close {
+  color: #fff;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.6)
+}
+
 
 .header__line {
   position: absolute;
@@ -38,8 +49,9 @@ body {
 
 
 .navbar-logo {
-  padding: 15px;
-  color: #fff;
+  position: relative;
+  height: 60px;
+  width: 80px;
   pointer-events: none;
 }
 
@@ -143,7 +155,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #212529;
 }
 
 .hori-selector .right:before {
@@ -169,18 +181,20 @@ body {
   #navbarSupportedContent ul {
     margin-bottom: 25px;
     margin-right: 0;
-    background-color: #000000;
 
   }
 
   #navbarSupportedContent ul li a {
     padding: 12px 20px;
     margin: 4px 15px;
+    font-size: 24px;
+    font-weight: bold;
   }
 
   #navbarSupportedContent ul li {
     margin-top: 15px;
   }
+
 
 
 

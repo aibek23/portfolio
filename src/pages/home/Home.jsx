@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import s from "./home.module.css"
+import Todolist from "../../components/todolist/Todolist";
 import { Container, col } from 'react-bootstrap';
 import Carousel from "../../components/carousel/CarouselBox";
 
@@ -13,6 +14,7 @@ const Home = () => {
         {/* <i className={s.header__line}></i> */}
         <Carousel />
         <Container>
+            <Todolist />
             <h1 data-aos="fade-up">home pages</h1>
             <p>
                 Что такое Lorem Ipsum?

@@ -1,0 +1,40 @@
+.link_sot {
+
+    margin: .8rem;
+}
+
+.img {
+
+    height: 450px;
+    widows: 250px;
+
+    padding: 17px 23px;
+    background-image: url(https://www.publicdomainpictures.net/pictures/190000/velka/golden-photo-frame-2.jpg);
+    background-size: contain;
+    background-size: 100%;
+    background-repeat: no-repeat round;
+    background-color: wheat;
+}
+
+.sotset {
+    display: flex;
+    text-align: center;
+    align-items: center
+}
+
+.sotset:hover {
+    transform: translate(5px, -10px);
+
+    transition: all .1s ease .1s;
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .link_sot {
+        margin: .6rem;
+        margin-bottom: 1.5rem;
+        width: 50px;
+        height: 50px;
+    }
+}

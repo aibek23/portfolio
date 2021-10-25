@@ -4,7 +4,7 @@ function ToDo({ todo, toggleTask, removeTask }) {
     return (
         <div key={todo.id} className={s.item_todo}>
             <div
-                className={s.item_text + todo.complete ? s.strike : ""}
+                className={`${s.item_text}  ${todo.complete ? s.strike : ""}`}
                 onClick={() => toggleTask(todo.id)}
             >
                 {todo.task}

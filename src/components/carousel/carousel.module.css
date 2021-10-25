@@ -1,8 +1,11 @@
 .header__line {
     position: absolute;
     width: 100%;
-    box-shadow: 2px 9px 20px 10px;
+    z-index: 5555;
+    box-shadow: 0px 0px 10px 5px;
+
 }
+
 
 .carousel__img {
     display: block;
