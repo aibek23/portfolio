@@ -12,7 +12,7 @@ const getLocalStorage = () => {
     return []
 }
 
-function Todolist() {
+function Todolist(props) {
 
     const [todos, setTodos] = useState(getLocalStorage());
 
@@ -51,7 +51,8 @@ function Todolist() {
         localStorage.setItem('Todos', Todos);
     }
 
-    return (
+    return (<>
+        <a className="btn btn-outline-danger mt-3 p-3 rounded-50 " href="#/portfolio" ><h4 className="font-weight-bolder">Back</h4></a>
         <div className={s.todolist}>
 
             <h1>
@@ -71,6 +72,7 @@ function Todolist() {
 
 
         </div>
+    </>
     );
 }
 export default Todolist

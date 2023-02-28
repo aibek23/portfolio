@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 const Block = () => {
     return (
         <Container>

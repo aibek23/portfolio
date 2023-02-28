@@ -1,5 +1,5 @@
 import React from 'react';
-import { YMaps, Map, Placemark, GeoObject, ObjectManager, } from 'react-yandex-maps';
+import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import MapMarcet from '../../img/svg/MapMarcet.svg';
 
 function YndexMap() {

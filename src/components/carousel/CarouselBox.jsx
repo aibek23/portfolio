@@ -54,7 +54,7 @@ const CarouselBox = () => {
                 <img
                     style={{ height: "635px" }}
                     className="d-block w-100"
-                    src="https://dev26.5bucks.ru/wp-content/uploads/2020/06/field_image_data_entry.jpg"
+                    src="https://wallbox.ru/resize/1920x1080/wallpapers/main2/201727/oblaka-gory-sneg-svejcaria.jpg"
                     alt="Third slide"
                 />
 

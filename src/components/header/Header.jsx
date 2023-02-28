@@ -1,8 +1,8 @@
-import React, { createRef } from 'react';
+import React from 'react';
 import logo from '../../logo.svg';
 import "./Navbar.css";
 import { useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import $ from "jquery";
 
 const Header = () => {
@@ -19,6 +19,9 @@ const Header = () => {
         for (let i = 0; i < linkactiv.length; i++) {
             if (linkactiv[i].className === "nav-link active") {
                 itemnav[i].classList.add("_active")
+            } else {
+                linkactiv[0].classList.add("active");
+                itemnav[0].classList.add("_active")
             }
         };
 
@@ -26,14 +29,15 @@ const Header = () => {
         var activeItemNewAnim = tabsNewAnim.find('._active');
         var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
         var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-        var itemPosNewAnimTop = activeItemNewAnim.position();
         var itemPosNewAnimLeft = activeItemNewAnim.position();
-        // $(".hori-selector").css({
-        //     "top": Math.floor(itemPosNewAnimLeft.top) + "px",
-        //     "left": Math.floor(itemPosNewAnimLeft.left) + "px",
-        //     "height": activeWidthNewAnimHeight + "px",
-        //     "width": activeWidthNewAnimWidth + "px"
-        // });
+
+        $(".hori-selector").css({
+            "top": Math.floor(itemPosNewAnimLeft.top) + "px",
+            "left": Math.floor(itemPosNewAnimLeft.left) + "px",
+            "height": activeWidthNewAnimHeight + "px",
+            "width": activeWidthNewAnimWidth + "px"
+        });
+
         $("#navbarSupportedContent").on("click", "li", function (e) {
             $('#navbarSupportedContent ul li').removeClass("_active");
             $(this).addClass('_active');
@@ -58,7 +62,6 @@ const Header = () => {
             if (window.innerWidth < 992) {
                 setTimeout(function () {
                     $('#offbtn').trigger('click');
-                    console.log(5);
                 }, 800);
             }
         });
@@ -95,8 +98,8 @@ const Header = () => {
                                 <div className="left"></div>
                                 <div className="right"></div>
                             </div>
-                            <li className="nav-item"  >
-                                <NavLink className="nav-link" to="/home">
+                            <li className="nav-item "  >
+                                <NavLink className="nav-link " to="/home">
                                     <i className="fas fa-tachometer-alt"></i>главная
                                 </NavLink>
                             </li>

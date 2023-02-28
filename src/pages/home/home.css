@@ -1,18 +1,28 @@
-body {
+.inntro__img img {
+  width: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 450px;
+  margin-top: 47px;
+  left: 0;
+  position: absolute;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.skills_main {
+  position: relative;
 }
 
-.container .skills {
+.skills_wrapp {
+  background-color: #f0f0f0;
+  width: 100%;
+  right: 0;
+}
+
+.skills_container {
+  max-width: 700px;
+  width: 100%;
+}
+
+.skills_container .skills {
   position: relative;
   display: flex;
   margin: 20px 0;
@@ -24,23 +34,23 @@ code {
   transition: 0.5s;
 }
 
-.container:hover .skills {
-  opacity: .1;
+.skills_container:hover .skills {
+  opacity: 0.1;
 }
 
-.container .skills:hover {
+.skills_container .skills:hover {
   opacity: 1;
   transform: calc(1.5);
 }
 
 .container .skills::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 50%;
-  background: rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, 0.1);
   z-index: 10;
 }
 
@@ -51,7 +61,6 @@ code {
   color: #fff;
   margin-top: -2px;
   text-transform: uppercase;
-
 }
 
 .skills .value {
@@ -61,7 +70,6 @@ code {
   color: #fff;
   margin-top: -2px;
   text-transform: uppercase;
-
 }
 
 .skills .percent {
@@ -85,9 +93,13 @@ code {
   background: #fff;
   box-sizing: inset 0 0 2px #000;
   animation: animate 2s ease-in-out forwards;
-
+  animation-timing-function: ease;
+  animation-delay: 3s;
+  animation-iteration-count: 2;
 }
-
+.dis {
+  display: flex;
+}
 
 @keyframes animate {
   from {
@@ -123,119 +135,53 @@ code {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
-
-p {
-  font-family: DavidLibre, serif;
-  font-weight: bold;
+.skills:nth-child(5) .progress {
+  background: -webkit-linear-gradient(90deg, #65d3ba, #2cfab8, #3eef74);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(90deg, #65d3ba, #2cfab8, #3eef74);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.skills:nth-child(6) .progress {
+  background: -webkit-linear-gradient(90deg, #0887d8, #ef5795, #ffdf0f);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(90deg, #0887d8, #ef5795, #ffdf0f);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.column {
-  position: relative;
-  height: max-content;
-  min-height: 100px;
-  /* width: 160px; */
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  border: 2px solid #7d7d7d;
-  /* Параметры границы */
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
+.skills:nth-child(7) .progress {
+  background: -webkit-linear-gradient(90deg, #0887d8, #ef5795, #ffdf0f);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(90deg, #0887d8, #ef5795, #ffdf0f);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.secondBoll {
-
-  width: max-content;
-
-  /* display: flex;
-  justify-items: center; */
-  display: grid;
-  justify-items: center;
-  /* background-image: url(https://s01.yapfiles.ru/files/1149153/ramka21.png); */
+.logo__skills img {
+  width: 100%;
+  height: 100%;
 }
 
-.secondBoll_item {
-  width: max-content;
-  position: absolute;
-  border-radius: 15px;
-  margin: 10px;
-  background-color: #fff0f0;
-  display: grid;
-  justify-items: center;
-
+.logo__skills {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
 }
 
-.animbg {
-  background-color: green;
-  transition: 1s ease;
-
-
-  background-size: 100%;
-  animation: gradient 2s ease-in-out forwards;
-  animation-delay: 2s;
-
-
-}
-
-.rounded-50 {
-  border-radius: 10px;
-  border: 3px solid red;
-}
-
-
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 100%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 100% 0%;
+@media (max-width: 991px) {
+  .skills_container .skills {
+    padding: 10px 10px 8px;
   }
 }
 
-.secondBoll_item div {
-  height: 80px;
-  width: 90px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  border: 2px solid #7d7d7d;
-}
+@media (max-width: 500px) {
+  .skills_container .skills {
+    padding: 5px 5px 3px;
+    justify-content: center;
+  }
 
-.firstBoll {
-  background-color: #fcefc5;
-}
-
-.awaiting-review-column {
-  background-color: #fffada;
-}
-
-.done-column {
-  background-color: #f5ffe5;
-}
-
-.movable-item {
-  border-radius: 5px;
-  background-color: #fafdff;
-  height: 70px;
-  width: 80px;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  .skills .percent {
+    margin-top: 3px;
+    width: calc(100% - 100px);
+    height: 15px;
+  }
 }

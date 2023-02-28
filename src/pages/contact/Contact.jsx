@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import s from './Contact.module.css';
@@ -14,7 +13,7 @@ const Contact = () => {
 
     return (
         <Container>
-            <div className="row mr-2 mt-4 ">
+            <div className="row mr-2 mt-4 " style={{ marginBottom: "300px" }}>
                 <div className="col-md-6 mb-2">
                     <div className={s.img} >
                         <div className="photo" style={{ height: "100%", widows: "100%", backgroundColor: "grey" }}>
